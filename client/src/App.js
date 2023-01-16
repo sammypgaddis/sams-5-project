@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import {Route, Routes} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src='https://dks.scene7.com/is/image/GolfGalaxy/16HFLU21ZSTNDMTHFCAC_Snapper?qlt=70&wid=1100&fmt=webp' className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

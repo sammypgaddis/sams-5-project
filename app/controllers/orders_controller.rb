@@ -9,4 +9,9 @@ class OrdersController < ApplicationController
         order= Order.find_by(id: params[:id])
         render json: order
     end
+
+    def destroy
+        session.delete :user_id
+        head :no_content
+    end
 end
