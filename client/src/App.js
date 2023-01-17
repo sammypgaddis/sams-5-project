@@ -1,24 +1,34 @@
 import { useEffect, useState } from 'react';
 import {Route, Routes} from 'react-router-dom';
+import NavBar from './component/NavBar';
+import Login from './component/Login';
+import LogOut from './component/LogOut';
+import SignUp from './component/SignUp';
+import Home from './component/Home';
 import './App.css';
 
 function App() {
+  const [customer, setCustomer]= useState(null)
+  console.log(customer)
+  useEffect(() =>{
+    fetch("/user_logged_in")
+    .then (r => r.json())
+    .then((user) => setCustomer(user))
+    },[])
+
   return (
     <div className="App">
+      <NavBar customer={customer}/>
       <header className="App-header">
-        <img src='https://dks.scene7.com/is/image/GolfGalaxy/16HFLU21ZSTNDMTHFCAC_Snapper?qlt=70&wid=1100&fmt=webp' className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+
+      <Routes>
+        <Route exact path="/home" element={<Home customer={customer} setCustomer={setCustomer}/>}/>
+        <Route exact path="/login" element= {<Login customer={customer} setCustomer={setCustomer} />}/>
+        <Route exact path="/logout" element= {<LogOut customer={customer} setCustomer={setCustomer}/>}/>
+        <Route exact path="signup" element= {<SignUp customer={customer} setCustomer={setCustomer}/>}/>
+      </Routes>
+      
     </div>
   );
 }
