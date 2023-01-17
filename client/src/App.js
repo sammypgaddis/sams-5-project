@@ -9,7 +9,8 @@ import './App.css';
 
 function App() {
   const [customer, setCustomer]= useState(null)
-  console.log(customer)
+  // console.log(customer)
+  
   useEffect(() =>{
     fetch("/user_logged_in")
     .then (r => r.json())
@@ -25,7 +26,7 @@ function App() {
       <Routes>
         <Route exact path="/home" element={<Home customer={customer} setCustomer={setCustomer}/>}/>
         <Route exact path="/login" element= {<Login customer={customer} setCustomer={setCustomer} />}/>
-        <Route exact path="/logout" element= {<LogOut customer={customer} setCustomer={setCustomer}/>}/>
+        <Route exact path="/logout" element= {<LogOut customer={customer} setCustomer={setCustomer} />}/>
         <Route exact path="signup" element= {<SignUp customer={customer} setCustomer={setCustomer}/>}/>
       </Routes>
       

@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordInvalid, with: :invalid_error
   
   def authorize 
-        render json: {error: "Not authorized username or password"}, status: :unauthorized unless session.include? :user_id
+        render json: {error: "Not authorized username or password"}, status: :unauthorized unless session.include? :customer_id
     end
 
     def invalid_error error

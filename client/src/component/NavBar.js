@@ -4,19 +4,24 @@ import { NavLink } from 'react-router-dom'
 const NavBar = ({customer}) => {
   return (
     <div>
-      {customer?
-                
+      {/* {customer?
                 (
-                <div className="loggedin">
+                  <div className="loggedout">
+                  <NavLink className="login" to="/login">Login</NavLink>
+                  <NavLink className="signup" to="/signup">Signup</NavLink>
+                  </div>
+                  )
+                  :
+                (
+                  <div className="loggedin">
                 <NavLink className="logout" to="/logout">Logout</NavLink>
                 </div>
-                ) : (
-                <div className="loggedout">
-                <NavLink className="login" to="/login">Login</NavLink>
-                <NavLink className="signup" to="/signup">Signup</NavLink>
-                </div>
                 )
-            }
+               
+              } */}
+                  <NavLink className="login" to="/login">Login</NavLink>
+                  <NavLink className="signup" to="/signup">Signup</NavLink>
+                  <NavLink className="logout" to="/logout">Logout</NavLink>
     </div>
   )
 }

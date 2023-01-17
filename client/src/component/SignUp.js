@@ -19,7 +19,7 @@ const SignUp = ({customer, setCustomer}) => {
       name: name,
       username: username,
       birthdate: birthdate,
-      password: password,
+      password: password
       
       }),
   })

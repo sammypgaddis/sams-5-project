@@ -12,7 +12,7 @@ class CustomersController < ApplicationController
     end
 
     def show
-        customer=Customer.find_by(id: session[:user_id])
+        customer=Customer.find_by(id: session[:customer_id])
         if customer 
             render json: customer
         else
