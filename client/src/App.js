@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <NavBar customer={customer}/>
-      <header className="App-header">
+      <header className="App-header"> water bottle 
       </header>
 
       <Routes>

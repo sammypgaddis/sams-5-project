@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
 
     def index 
-        products = Product.all 
-        render json: products
+        render json: Product.all , status: :ok
+        
     end
 
     def show 

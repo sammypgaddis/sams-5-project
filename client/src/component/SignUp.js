@@ -10,7 +10,7 @@ const SignUp = ({customer, setCustomer}) => {
 
   function handleSubmit(e) {
   e.preventDefault();
-  fetch("/signup", {
+  fetch("/customers", {
       method: "POST",
       headers: {
       "Content-Type": "application/json",
@@ -27,6 +27,7 @@ const SignUp = ({customer, setCustomer}) => {
       if (r.ok) {
       r.json()
       .then((user) => setCustomer(user));
+      alert("You're officially signed up fucker")
       }
   });
   }

@@ -21,7 +21,7 @@ const Login = ({customer, setCustomer}) => {
         }).then((r) => {
             if (r.ok) {
                 r.json().then((user) => {
-                    // setCustomer(user)
+                    setCustomer(user)
                     navigate('/home')
                 })
             } else {
