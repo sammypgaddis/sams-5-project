@@ -1,14 +1,17 @@
 import React from 'react'
 
 const WaterBottleCard = ({item}) => {
+    // console.log(item)
   return (
-    <div>
-      <li>
+    <div className="waterBottleCard">
+      <li className="front-card">
         <h4>{item.item_name}</h4>
-        <img src={item.image} alt={"water bottle image"} />
+        <img className="images"src={item.image} alt={"water bottle"} />
         <p>Price:$ {item.price}</p>
-        <p>{item.description}</p>
       </li>
+      {/* <li className="back-card">
+        <p >{item.description}</p>
+      </li> */}
     </div>
   )
 }

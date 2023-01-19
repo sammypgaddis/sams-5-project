@@ -11,3 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.images {
+  max-width: 200px;
+  height: 300px;
+  min-height: 300px;
+  border-radius: 10px;
+  background-color: black;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: thick;
+}
+
+/* .waterBottleList{
+  position: relative;
+  width: 250px;
+  height: 320px;
+} */
+
+/* .waterBottleCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+} */
+
+/* .waterBottleCard:hover {
+  transform: rotateY(180deg);
+} */
+
+/* .front-card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  text-align: center;
+  font-family: 'zilla salb', sans-serif;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+} */
+
+/* .back-card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  text-align: center;
+  font-family: 'zilla salb', sans-serif;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+} */

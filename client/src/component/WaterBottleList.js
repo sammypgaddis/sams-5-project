@@ -10,7 +10,7 @@ const WaterBottleList = ({waterBottle}) => {
     })
 
   return (
-    <div>
+    <div className="waterBottleList">
       {listBottle}
     </div>
   )

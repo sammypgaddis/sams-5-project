@@ -25,10 +25,30 @@ function App() {
 
       <Routes>
         <Route exact path="/home" element={<Home customer={customer} setCustomer={setCustomer}/>}/>
+
         <Route exact path="/login" element= {<Login customer={customer} setCustomer={setCustomer} />}/>
         <Route exact path="/logout" element= {<LogOut customer={customer} setCustomer={setCustomer} />}/>
         <Route exact path="signup" element= {<SignUp customer={customer} setCustomer={setCustomer}/>}/>
       </Routes>
+      {/* <Routes>
+          <Route exact path="/home">
+            element={<Home customer={customer} setCustomer={setCustomer}/>}
+          </Route>
+
+          <Route exact path="/login">
+            element={<Login customer={customer} setCustomer={setCustomer} />}
+            {<NavBar customer={customer}/>}
+          </Route>
+
+          <Route exact path="/logout">
+            element={<LogOut customer={customer} setCustomer={setCustomer} />}
+            {<NavBar customer={customer}/>}
+          </Route>
+          <Route exact path="signup">
+            element={<SignUp customer={customer} setCustomer={setCustomer}/>}
+            {<NavBar customer={customer}/>}
+          </Route>
+      </Routes> */}
       
     </div>
   );
