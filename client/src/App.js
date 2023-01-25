@@ -24,7 +24,8 @@ function App() {
   return (
     <div className="App">
       <NavBar customer={customer}/>
-      <header className="App-header"> water bottle 
+      <header className="App-header">  
+      <img className="image-header" loading="eager" src="https://www.hydroflask.com/media/wysiwyg/hydro-4735-desktop-image-2x_1.jpg" alt="hydro" ></img>
       </header>
 
       <Routes>
@@ -35,26 +36,6 @@ function App() {
         <Route exact path="/orders" element= {<MyOrders customer={customer} setCustomer={setCustomer} />}/>
         <Route exact path="/profile" element= {<Profile customer={customer} setCustomer={setCustomer} />}/>
       </Routes>
-      {/* <Routes>
-          <Route exact path="/home">
-            element={<Home customer={customer} setCustomer={setCustomer}/>}
-          </Route>
-
-          <Route exact path="/login">
-            element={<Login customer={customer} setCustomer={setCustomer} />}
-            {<NavBar customer={customer}/>}
-          </Route>
-
-          <Route exact path="/logout">
-            element={<LogOut customer={customer} setCustomer={setCustomer} />}
-            {<NavBar customer={customer}/>}
-          </Route>
-          <Route exact path="signup">
-            element={<SignUp customer={customer} setCustomer={setCustomer}/>}
-            {<NavBar customer={customer}/>}
-          </Route>
-      </Routes> */}
-      
     </div>
   );
 }

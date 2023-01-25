@@ -27,7 +27,7 @@ const Home = ({customer, setCustomer}) => {
 
       <div>
         {/* <MyOrders customer={customer} setCustomer={setCustomer} /> */}
-        <h2>All BOttles</h2>
+        <h2>All Bottles</h2>
         <WaterBottleList waterBottle={waterBottle}/>
         {/* <MyOrders waterBottle={waterBottle}/> */}
       </div>
