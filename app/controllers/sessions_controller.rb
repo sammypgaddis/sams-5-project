@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
     skip_before_action :authorize, only: [:create]
     
     def show
+        # byebug
         customer_logged_in = Customer.find_by_id(session[:customer_id])
         render json: customer_logged_in
     end

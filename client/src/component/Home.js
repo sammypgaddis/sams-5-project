@@ -1,6 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import WaterBottleList from './WaterBottleList'
-import NavLogOut from './NavLogOut'
+        
+// import MyOrders from './MyOrders'
+
 
 const Home = ({customer, setCustomer}) => {
 
@@ -22,12 +24,14 @@ const Home = ({customer, setCustomer}) => {
 
   return (
     <div>
-      <NavLogOut customer={customer}/>
 
       <div>
-        hello world
+        {/* <MyOrders customer={customer} setCustomer={setCustomer} /> */}
+        <h2>All BOttles</h2>
         <WaterBottleList waterBottle={waterBottle}/>
+        {/* <MyOrders waterBottle={waterBottle}/> */}
       </div>
+
     </div>
   )
 }

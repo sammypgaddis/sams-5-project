@@ -11,7 +11,12 @@ class OrdersController < ApplicationController
     end
 
     def destroy
-        session.delete :user_id
+        Order.find_by(id: params[:id]).destroy
         head :no_content
     end
+
+    # def create 
+        
+    # end
+
 end

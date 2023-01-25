@@ -20,9 +20,19 @@ class CustomersController < ApplicationController
         end
     end
 
+    def update
+        customer = Customer.find_by(id: session[:customer_id])
+    
+        if customer
+          render json: customer.update(customer_params) 
+        else
+          render json: customer.errors, status: :unprocessable_entity
+        end
+      end
+
     private
 
     def customer_params
-        params.permit(:username, :password)
+        params.permit(:name, :birthdate, :username, :password)
     end
 end

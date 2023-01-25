@@ -1,4 +1,5 @@
 import React, { useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = ({customer, setCustomer}) => {
 
@@ -7,6 +8,7 @@ const SignUp = ({customer, setCustomer}) => {
   const [birthdate, setBirthdate] = useState("");
   const [password, setPassword] = useState("");
   
+  let navigate = useNavigate()
 
   function handleSubmit(e) {
   e.preventDefault();
@@ -27,7 +29,8 @@ const SignUp = ({customer, setCustomer}) => {
       if (r.ok) {
       r.json()
       .then((user) => setCustomer(user));
-      alert("You're officially signed up fucker")
+      alert("You're officially signed up")
+      navigate('/login')
       }
   });
   }
