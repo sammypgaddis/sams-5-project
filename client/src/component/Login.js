@@ -35,10 +35,11 @@ const Login = ({customer, setCustomer}) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label>Username</label>
         <input
+        className="formTxtArea"
             type="text"
             id="username"
             autoComplete="off"
@@ -47,6 +48,7 @@ const Login = ({customer, setCustomer}) => {
         />
         <label>Password</label>
         <input
+        className="formTxtArea"
             type="password"
             id="password"
             autoComplete="current-password"

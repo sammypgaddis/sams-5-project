@@ -34,7 +34,8 @@ const Profile = ({ customer, setCustomer }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
+      <h1> Update Profile</h1>
       <label>
         Name:
         <input
