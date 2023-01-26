@@ -38,30 +38,36 @@ const Profile = ({ customer, setCustomer }) => {
       <label>
         Name:
         <input
+        className="formTxtArea"
           type='text'
           name='name'
           value={formData.name}
           onChange={handleChange}
         />
       </label>
+      <br></br>
       <label>
         Username:
         <input
+        className="formTxtArea"
           type='text'
           name='username'
           value={formData.username}
           onChange={handleChange}
         />
       </label>
+      <br></br>
       <label>
         Birthdate:
         <input
+        className="formTxtArea"
           type='text'
           name='birthdate'
           value={formData.birthdate}
           onChange={handleChange}
         />
       </label>
+      <br></br>
       <button type='submit'>Update Profile</button>
     </form>
   )
